@@ -1,0 +1,257 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('@/assets/font/Inter.ttf') format('truetype');
+    font-weight: 100 200 300 400 500 600 700 800 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Smooch Sans';
+    src: url('@/assets/font/SmoochSans.ttf') format('truetype');
+    font-weight: 100 200 300 400 500 600 700 800 900;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Fira Code';
+    src: url('@/assets/font/FiraCode.ttf') format('truetype');
+    font-weight: 300 400 500 600 700;
+    font-style: normal;
+}
+
+/* Typography */
+:root {
+    --font-family-sans: 'Inter', sans-serif;
+    --font-family-code: 'Fira Code', monospace;
+
+    --font-weight-extra-bold: 800;
+    --font-weight-bold: 700;
+    --font-weight-medium: 500;
+    --font-weight-regular: 400;
+
+    --font-size-h1: 72px;
+    --font-weight-h1: 800;
+    --line-height-h1: 4.5rem;
+    --letter-spacing-h1: -0.05em;
+
+    --font-size-h2: 60px;
+    --font-weight-h2: 700;
+    --line-height-h2: 3.75rem;
+    --letter-spacing-h2: -0.01em;
+
+    --font-size-h3: 48px;
+    --font-weight-h3: 700;
+    --line-height-h3: 3rem;
+    --letter-spacing-h3: -0.01em;
+
+    --font-size-h4: 36px;
+    --font-weight-h4: 700;
+    --line-height-h4: 2.25rem;
+    --letter-spacing-h4: -0.01em;
+
+    --font-size-h5: 24px;
+    --font-weight-h5: 700;
+    --line-height-h5: 1.5rem;
+    --letter-spacing-h5: -0.01em;
+
+    --font-size-h6: 24px;
+    --font-weight-h6: 500;
+    --line-height-h6: 1.5rem;
+    --letter-spacing-h6: -0.01em;
+
+    --font-size-body-large: 20px;
+    --font-weight-body-large: 500;
+    --line-height-body-large: 1.25rem;
+    --letter-spacing-body-large: -0.005em;
+
+    --font-size-body-default: 16px;
+    --font-weight-body-default: 500;
+    --line-height-body-default: 1.5rem;
+    --letter-spacing-body-default: -0.005em;
+
+    --font-size-body-small: 12px;
+    --font-weight-body-small: 300;
+    --line-height-body-small: 0.75rem;
+    --letter-spacing-body-small: -0.005em;
+}
+
+/* :root {
+    --font-family-sans: 'Smooch Sans', sans-serif;
+    --font-family-code: 'Fira Code', monospace;
+
+    --font-size-h1: 72px;
+    --font-weight-h1: 800;
+    --line-height-h1: 4.5rem;
+    --letter-spacing-h1: 0.05rem;
+
+    --font-size-h2: 60px;
+    --font-weight-h2: 700;
+    --line-height-h2: 3.75rem;
+    --letter-spacing-h2: 0.01rem;
+
+    --font-size-h3: 48px;
+    --font-weight-h3: 700;
+    --line-height-h3: 3rem;
+    --letter-spacing-h3: 0.01rem;
+
+    --font-size-h4: 36px;
+    --font-weight-h4: 700;
+    --line-height-h4: 2.25rem;
+    --letter-spacing-h4: 0.01rem;
+
+    --font-size-h5: 24px;
+    --font-weight-h5: 700;
+    --line-height-h5: 1.5rem;
+    --letter-spacing-h5: 0.01rem;
+
+    --font-size-h6: 24px;
+    --font-weight-h6: 500;
+    --line-height-h6: 1.5rem;
+    --letter-spacing-h6: 0.01rem;
+
+    --font-size-body-large: 20px;
+    --font-weight-body-large: 500;
+    --line-height-body-large: 1.25rem;
+    --letter-spacing-body-large: -0.005em;
+
+    --font-size-body-default: 16px;
+    --font-weight-body-default: 500;
+    --line-height-body-default: 1.5rem;
+    --letter-spacing-body-default: -0.005em;
+
+    --font-size-body-small: 12px;
+    --font-weight-body-small: 300;
+    --line-height-body-small: 0.75rem;
+    --letter-spacing-body-small: -0.005em;
+} */
+
+body {
+    font-family: var(--font-family-sans);
+}
+
+h1 {
+    font-size: var(--font-size-h1);
+    line-height: var(--line-height-h1);
+    font-weight: var(--font-weight-h1);
+    letter-spacing: var(--letter-spacing-h1);
+}
+
+h2 {
+    font-size: var(--font-size-h2);
+    line-height: var(--line-height-h2);
+    font-weight: var(--font-weight-h2);
+    letter-spacing: var(--letter-spacing-h2);
+}
+
+h3 {
+    font-size: var(--font-size-h3);
+    line-height: var(--line-height-h3);
+    font-weight: var(--font-weight-h3);
+    letter-spacing: var(--letter-spacing-h3);
+}
+
+h4 {
+    font-size: var(--font-size-h4);
+    line-height: var(--line-height-h4);
+    font-weight: var(--font-weight-h4);
+    letter-spacing: var(--letter-spacing-h4);
+}
+
+h5 {
+    font-size: var(--font-size-h5);
+    line-height: var(--line-height-h5);
+    font-weight: var(--font-weight-h5);
+    letter-spacing: var(--letter-spacing-h5);
+}
+
+h6 {
+    font-size: var(--font-size-h6);
+    line-height: var(--line-height-h6);
+    font-weight: var(--font-weight-meh6);
+    letter-spacing: var(--letter-spacing-h6);
+}
+
+p {
+    font-size: var(--font-size-body-default);
+    line-height: var(--line-height-body-default);
+    font-weight: var(--font-weight-body-default);
+    letter-spacing: var(--letter-spacing-body-default);
+}
+
+p.large {
+    font-size: var(--font-size-body-large);
+    line-height: var(--line-height-body-large);
+    font-weight: var(--font-weight-body-large);
+    letter-spacing: var(--letter-spacing-body-large);
+}
+
+p.small {
+    font-size: var(--font-size-body-small);
+    line-height: var(--line-height-body-small);
+    font-weight: var(--font-weight-body-small);
+    letter-spacing: var(--letter-spacing-body-small);
+}
+
+@media screen and (max-width: 1200px) {
+    h1 { font-size: calc(var(--font-size-h1) * 0.95); }
+    h2 { font-size: calc(var(--font-size-h2) * 0.95); }
+    h3 { font-size: calc(var(--font-size-h3) * 0.95); }
+}
+
+@media screen and (max-width: 992px) {
+    h1 { font-size: calc(var(--font-size-h1) * 0.9); }
+    h2 { font-size: calc(var(--font-size-h2) * 0.9); }
+    h3 { font-size: calc(var(--font-size-h3) * 0.9); }
+    h4 { font-size: calc(var(--font-size-h4) * 0.95); }
+}
+
+@media screen and (max-width: 768px) {
+    h1 { 
+        font-size: calc(var(--font-size-h1) * 0.85);
+        line-height: 1.2;
+    }
+    h2 { 
+        font-size: calc(var(--font-size-h2) * 0.85);
+        line-height: 1.2;
+    }
+    h3 { font-size: calc(var(--font-size-h3) * 0.85); }
+    h4 { font-size: calc(var(--font-size-h4) * 0.9); }
+    h5 { font-size: calc(var(--font-size-h5) * 0.95); }
+}
+
+@media screen and (max-width: 576px) {
+    body {
+        font-size: calc(var(--font-size-body-default) * 0.95);
+    }
+    h1 { 
+        font-size: calc(var(--font-size-h1) * 0.8);
+        line-height: 1.1;
+        word-break: break-word;
+    }
+    h2 { 
+        font-size: calc(var(--font-size-h2) * 0.8);
+        line-height: 1.1;
+    }
+    h3 { font-size: calc(var(--font-size-h3) * 0.8); }
+    h4 { font-size: calc(var(--font-size-h4) * 0.85); }
+    h5 { font-size: calc(var(--font-size-h5) * 0.9); }
+    h6 { font-size: calc(var(--font-size-h6) * 0.95); }
+}
+
+/* Color Theme */
+:root {
+    --bg-primary: #1E1E1E;
+    --bg-secondary: #2C2C2C;
+    --text-primary: #F9FAFB;
+    --text-secondary: #9CA3AF;
+    --accent-primary: #58C4dC;
+    --accent-secondary: #1B6D7F;
+    --accent-tertiary: #64FFDA;
+}
+
+.transition {
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+    transition-timing-function: linear;
+    transition-duration: .15s;
+}
