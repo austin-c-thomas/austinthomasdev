@@ -1,19 +1,20 @@
 <template>
     <VApp>
         <SiteHeader></SiteHeader>
-        
         <VMain>
-            <WelcomeView></WelcomeView>
-            <AboutView></AboutView>
-            <WorkHistoryView></WorkHistoryView>
-            <ProjectsView></ProjectsView>
-            <ContactView></ContactView>
+            <FlexContainer class="app-content" direction="column" horizontal-align="center" padding="var(--content-padding)">
+                <WelcomeView></WelcomeView>
+                <AboutView></AboutView>
+                <WorkHistoryView></WorkHistoryView>
+                <ProjectsView></ProjectsView>
+                <ContactView></ContactView>
+            </FlexContainer>
         </VMain>
-
     </VApp>
 </template>
 
 <script setup>
+import FlexContainer from '@/components/layout/Container/FlexContainer.vue';
 import SiteHeader from '@/components/SiteHeader/SiteHeader.vue';
 import WelcomeView from '@/views/WelcomeView.vue';
 import AboutView from '@/views/AboutView.vue';

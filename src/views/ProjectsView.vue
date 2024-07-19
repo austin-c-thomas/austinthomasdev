@@ -1,7 +1,7 @@
 <template>
     <ViewWrapper id="projects">
 
-        <FlexContainer direction="column" gap="1rem" padding="2rem">
+        <FlexContainer direction="column" gap="1rem">
             <h2><AccentText>03.</AccentText>Projects</h2>
         </FlexContainer>    
         

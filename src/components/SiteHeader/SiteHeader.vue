@@ -2,24 +2,31 @@
     <VAppBar
         id="site-header"
         class="transition"
+        :height="isScrolled ? 64 : 80"
         :elevation="isScrolled ? 4 : 0"
         :class="{ 'site-header--isScrolled': isScrolled }"
     >
-        <FlexContainer horizontal-align="space-between" vertical-align="center" padding="0 1rem" >
-            
-            <LogoButton></LogoButton>
-    
-            <template v-if="isMobile">
-                <VBtn icon @click="toggleNavigationDrawer">
-                    <VIcon>mdi-menu</VIcon>
-                </VBtn>
-            </template>
 
-            <template v-else>
-                <SiteNavigation></SiteNavigation>
-            </template>
+        <FlexContainer class="header--outer" horizontal-align="center">
+            
+            <FlexContainer class="header--inner" horizontal-align="space-between" vertical-align="center" padding="--var(content-padding)" >
+                
+                <LogoButton></LogoButton>
+        
+                <template v-if="isMobile">
+                    <VBtn icon @click="toggleNavigationDrawer">
+                        <VIcon>mdi-menu</VIcon>
+                    </VBtn>
+                </template>
+
+                <template v-else>
+                    <SiteNavigation></SiteNavigation>
+                </template>
+
+            </FlexContainer>
 
         </FlexContainer>
+
     </VAppBar>
 
     <VNavigationDrawer 
@@ -60,6 +67,11 @@ const closeNavigationDrawer = () => {
     top: 0;
     left: 0;
     right: 0;
+}
+
+.header--inner {
+    max-width: var(--max-content-width);
+    padding: var(--content-padding);
 }
 
 .nav-drawer {

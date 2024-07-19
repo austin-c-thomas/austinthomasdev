@@ -33,6 +33,9 @@ const scrollToSection = (sectionId) => {
 
 <style scoped>
 .logo-button {
-    padding: 8px 0;
+    height: fit-content;
+    width: fit-content;
+    min-width: 0;
+    padding: 4px;
 }
 </style>

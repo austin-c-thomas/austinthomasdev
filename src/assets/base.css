@@ -1,3 +1,15 @@
+:root {
+    --max-content-width: 100%;
+    --content-padding: 0 2rem;
+}
+
+@media screen and (max-width: 767px) {
+    :root {
+        --content-padding: 0 1rem;
+    }
+}
+
+/* Typography */
 @font-face {
     font-family: 'Inter';
     src: url('@/assets/font/Inter.ttf') format('truetype');
@@ -20,9 +32,9 @@
     font-style: normal;
 }
 
-/* Typography */
 :root {
     --font-family-sans: 'Inter', sans-serif;
+    --font-family-sans-alt: 'Smooch Sans', sans-serif;
     --font-family-code: 'Fira Code', monospace;
 
     --font-weight-extra-bold: 800;
@@ -75,56 +87,6 @@
     --line-height-body-small: 0.75rem;
     --letter-spacing-body-small: -0.005em;
 }
-
-/* :root {
-    --font-family-sans: 'Smooch Sans', sans-serif;
-    --font-family-code: 'Fira Code', monospace;
-
-    --font-size-h1: 72px;
-    --font-weight-h1: 800;
-    --line-height-h1: 4.5rem;
-    --letter-spacing-h1: 0.05rem;
-
-    --font-size-h2: 60px;
-    --font-weight-h2: 700;
-    --line-height-h2: 3.75rem;
-    --letter-spacing-h2: 0.01rem;
-
-    --font-size-h3: 48px;
-    --font-weight-h3: 700;
-    --line-height-h3: 3rem;
-    --letter-spacing-h3: 0.01rem;
-
-    --font-size-h4: 36px;
-    --font-weight-h4: 700;
-    --line-height-h4: 2.25rem;
-    --letter-spacing-h4: 0.01rem;
-
-    --font-size-h5: 24px;
-    --font-weight-h5: 700;
-    --line-height-h5: 1.5rem;
-    --letter-spacing-h5: 0.01rem;
-
-    --font-size-h6: 24px;
-    --font-weight-h6: 500;
-    --line-height-h6: 1.5rem;
-    --letter-spacing-h6: 0.01rem;
-
-    --font-size-body-large: 20px;
-    --font-weight-body-large: 500;
-    --line-height-body-large: 1.25rem;
-    --letter-spacing-body-large: -0.005em;
-
-    --font-size-body-default: 16px;
-    --font-weight-body-default: 500;
-    --line-height-body-default: 1.5rem;
-    --letter-spacing-body-default: -0.005em;
-
-    --font-size-body-small: 12px;
-    --font-weight-body-small: 300;
-    --line-height-body-small: 0.75rem;
-    --letter-spacing-body-small: -0.005em;
-} */
 
 body {
     font-family: var(--font-family-sans);

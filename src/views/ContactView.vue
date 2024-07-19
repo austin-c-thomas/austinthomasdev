@@ -1,7 +1,7 @@
 <template>
     <ViewWrapper id="contact">
         
-        <FlexContainer direction="column" gap="1rem" padding="2rem">
+        <FlexContainer direction="column" gap="1rem">
             <h2><AccentText>04.</AccentText> Contact</h2>
         </FlexContainer>
 

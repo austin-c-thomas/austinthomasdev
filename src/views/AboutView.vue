@@ -1,6 +1,6 @@
 <template>
     <ViewWrapper id="about">
-        <FlexContainer direction="column" gap="1rem" padding="2rem">
+        <FlexContainer direction="column" gap="1rem">
             <h2><AccentText>01.</AccentText>About Me</h2>
         </FlexContainer>
     </ViewWrapper>

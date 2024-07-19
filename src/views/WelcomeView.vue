@@ -1,7 +1,7 @@
 <template>
     <ViewWrapper id="welcome">
 
-        <FlexContainer direction="column" gap="1rem" padding="2rem">
+        <FlexContainer direction="column" gap="1rem">
             <AccentText size="large">Nice to meet you, I'm</AccentText>
             <h1>Austin Thomas</h1>
             <h2>I write software.</h2>

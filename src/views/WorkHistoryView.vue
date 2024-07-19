@@ -1,7 +1,7 @@
 <template>
     <ViewWrapper id="work-history">
 
-        <FlexContainer direction="column" gap="1rem" padding="2rem">
+        <FlexContainer direction="column" gap="1rem">
             <h2><AccentText>02.</AccentText>Work History</h2>
         </FlexContainer>
 

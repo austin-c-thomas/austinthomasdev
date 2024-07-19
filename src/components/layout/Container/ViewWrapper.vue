@@ -15,6 +15,7 @@ const wrapperStyle = computed(() => {
         paddingTop: `${headerHeight.value}px`,
         minHeight: '100vh',
         width: '100%',
+        maxWidth: 'var(--max-content-width)'
     };
 });
 </script>
