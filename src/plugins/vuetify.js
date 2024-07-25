@@ -56,4 +56,4 @@ const vuetify = createVuetify({
     }
 });
 
-export default vuetify
+export default vuetify;

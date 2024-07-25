@@ -1,30 +1,62 @@
 <template>
-    <VApp>
-        <SiteHeader></SiteHeader>
-        <VMain>
-            <FlexContainer class="app-content" direction="column" horizontal-align="center" padding="var(--content-padding)">
-                <WelcomeView></WelcomeView>
-                <AboutView></AboutView>
-                <WorkHistoryView></WorkHistoryView>
-                <ProjectsView></ProjectsView>
-                <ContactView></ContactView>
-            </FlexContainer>
-        </VMain>
-    </VApp>
-</template>
+    <WelcomeScreen v-if="showWelcomeScreen"></WelcomeScreen>
+    <Transition name="fade">
+        <VApp>
+            <SiteHeader></SiteHeader>
+            <VMain>
+                <FlexContainer class="app-content" direction="column" horizontal-align="center" padding="var(--content-padding)">
+                
+                <SectionWrapper id="welcome">
+                    <WelcomeView></WelcomeView>
+                </SectionWrapper>
 
+                <SectionView 
+                    v-for="section in sections" 
+                    :key="section.id" 
+                    :section="section"
+                ></SectionView>
+
+                </FlexContainer>
+            </VMain>
+        </VApp>
+    </Transition>
+</template>
+  
 <script setup>
+import { ref, computed, onMounted } from 'vue';
+import { useStore } from 'vuex';
 import FlexContainer from '@/components/layout/Container/FlexContainer.vue';
+import WelcomeScreen from '@/components/WelcomeScreen/WelcomeScreen.vue';
 import SiteHeader from '@/components/SiteHeader/SiteHeader.vue';
 import WelcomeView from '@/views/WelcomeView.vue';
-import AboutView from '@/views/AboutView.vue';
-import WorkHistoryView from '@/views/WorkHistoryView.vue';
-import ProjectsView from '@/views/ProjectsView.vue';
-import ContactView from '@/views/ContactView.vue';
-</script>
+import SectionWrapper from '@/components/Section/SectionWrapper.vue';
+import SectionView from '@/components/Section/SectionView.vue';
 
+const store = useStore();
+const sections = computed(() => store.getters.sections);
+
+const showWelcomeScreen = ref(true);
+
+onMounted(async () => {
+    // showWelcomeScreen.value = false;
+    setTimeout(() => {
+    showWelcomeScreen.value = false;
+    }, 5000);
+})
+</script>
+  
 <style scoped>
 .v-main {
     padding-top: 0;
+}
+  
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 1s ease;
+}
+  
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
 }
 </style>

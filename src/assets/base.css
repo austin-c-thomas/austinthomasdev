@@ -1,9 +1,21 @@
 :root {
     --max-content-width: 100%;
-    --content-padding: 0 2rem;
+    --content-padding: 0 3rem;
+}
+
+@media screen and (min-width: 1200px) {
+    :root {
+        --content-padding: 0 5%;
+    }
 }
 
 @media screen and (max-width: 767px) {
+    :root {
+        --content-padding: 0 2rem;
+    }
+}
+
+@media screen and (max-width: 449px) {
     :root {
         --content-padding: 0 1rem;
     }
@@ -47,23 +59,28 @@
     --line-height-h1: 4.5rem;
     --letter-spacing-h1: -0.05em;
 
-    --font-size-h2: 60px;
+    --font-size-h2-large: 60px;
+    --font-weight-h2-large: 700;
+    --line-height-h2-large: 3.75rem;
+    --letter-spacing-h2-large: -0.01em;
+
+    --font-size-h2: 36px;
     --font-weight-h2: 700;
-    --line-height-h2: 3.75rem;
+    --line-height-h2: 2.25rem;
     --letter-spacing-h2: -0.01em;
 
-    --font-size-h3: 48px;
+    --font-size-h3: 24px;
     --font-weight-h3: 700;
-    --line-height-h3: 3rem;
+    --line-height-h3: 1.5rem;
     --letter-spacing-h3: -0.01em;
 
-    --font-size-h4: 36px;
+    --font-size-h4: 24px;
     --font-weight-h4: 700;
-    --line-height-h4: 2.25rem;
+    --line-height-h4: 1.5rem;
     --letter-spacing-h4: -0.01em;
 
     --font-size-h5: 24px;
-    --font-weight-h5: 700;
+    --font-weight-h5: 600;
     --line-height-h5: 1.5rem;
     --letter-spacing-h5: -0.01em;
 
@@ -104,6 +121,13 @@ h2 {
     line-height: var(--line-height-h2);
     font-weight: var(--font-weight-h2);
     letter-spacing: var(--letter-spacing-h2);
+}
+
+h2.large {
+    font-size: var(--font-size-h2-large);
+    line-height: var(--line-height-h2-large);
+    font-weight: var(--font-weight-h2-large);
+    letter-spacing: var(--letter-spacing-h2-large);
 }
 
 h3 {
@@ -206,14 +230,32 @@ p.small {
     --bg-primary: #1E1E1E;
     --bg-secondary: #2C2C2C;
     --text-primary: #F9FAFB;
-    --text-secondary: #9CA3AF;
+    --text-secondary: #95AEB1;
     --accent-primary: #58C4dC;
     --accent-secondary: #1B6D7F;
     --accent-tertiary: #64FFDA;
+}
+
+p {
+    color: var(--text-secondary);
+}
+
+.text-primary {
+    color: var(--text-primary);
+}
+
+.color-text-secondary {
+    color: var(--text-secondary);
 }
 
 .transition {
     transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
     transition-timing-function: linear;
     transition-duration: .15s;
+}
+
+.transition--slow {
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+    transition-timing-function: linear;
+    transition-duration: .5s;
 }

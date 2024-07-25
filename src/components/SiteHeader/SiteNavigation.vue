@@ -7,11 +7,11 @@
                 :style="itemStyle"
                 class="nav-item"
                 variant="plain"
-                @click="handleItemClick(item.to)"
+                @click="handleItemClick(item.id)"
                 rounded
                 link
             >
-                <AccentText>{{ prependText(index) }}</AccentText>
+                <AccentText>{{ item.titlePrepend }}</AccentText>
                 {{ item.title }}
             </VListItem>
         </FlexContainer>
@@ -19,7 +19,8 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue';
+import { computed } from 'vue';
+import { useStore } from 'vuex';
 import { useLayout } from '@/composables/layout.js';
 import FlexContainer from '@/components/layout/Container/FlexContainer.vue';
 import AccentText from '@/components/layout/Text/AccentText.vue';
@@ -28,16 +29,9 @@ const { isMobile } = useLayout();
 
 const emit = defineEmits(['navigate']);
 
-const menuItems = ref([
-    { title: "About Me", to: "about" },
-    { title: "Work History", to: "work-history" },
-    { title: "Projects", to: "projects" },
-    { title: "Contact", to: "contact" },
-]);
+const store = useStore();
 
-const prependText = (index) => {
-    return `0${index + 1}.`;
-}
+const menuItems = computed(() => store.getters.sections);
 
 const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);

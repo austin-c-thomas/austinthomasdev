@@ -37,9 +37,13 @@ const props = defineProps({
         type: String,
         default: '0',
     },
+    fitContent: {
+        type: Boolean,
+        default: false,
+    }
 });
 
-const { direction, verticalAlign, horizontalAlign, gap, wrap, padding, margin } = toRefs(props);
+const { direction, verticalAlign, horizontalAlign, gap, wrap, padding, margin, fitContent } = toRefs(props);
 
 const flexStyle = computed(() => {
     let justifyContent = 'flex-start';
@@ -53,6 +57,14 @@ const flexStyle = computed(() => {
         alignItems = horizontalAlign.value;
     }
 
+    let width = '100%';
+    let height = '100%';
+    
+    if (fitContent.value) {
+        width = 'fit-content';
+        height = 'fit-content';
+    }
+
     return {
         display: 'flex',
         flexDirection: direction.value,
@@ -62,7 +74,8 @@ const flexStyle = computed(() => {
         flexWrap: wrap.value,
         padding: padding.value,
         margin: margin.value,
-        width: '100%',
+        width: width,
+        height: height,
     };
 });
 
