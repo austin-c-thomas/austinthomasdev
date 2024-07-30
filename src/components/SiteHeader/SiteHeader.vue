@@ -70,8 +70,10 @@ const closeNavigationDrawer = () => {
 }
 
 .header--inner {
-    max-width: var(--max-content-width);
-    padding: var(--content-padding);
+    padding-top: var(--header-padding-top-bottom);
+    padding-bottom: var(--header-padding-top-bottom);
+    padding-left: var(--header-padding-left-right);
+    padding-right: var(--header-padding-left-right);
 }
 
 .nav-drawer {

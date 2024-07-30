@@ -1,6 +1,6 @@
 <template>
     <div class="about">
-        <GridContainer :columns="2" :column-sizes="['2fr', '1fr']" gap="8rem">
+        <GridContainer :columns="2" :column-sizes="['2fr', '1fr']" :gap="containerGap">
 
         <div class="about--content">
             <p>I wasn't always in tech. I spent some great years navigating the fast-paced service industry, competing in business plan competitions, and once ran a marketing campaign for a fiction author. These experiences shaped my resilience, people skills, and work ethic, but also highlighted something missing: the ability to solve difficult puzzles in a creative way.</p>
@@ -10,9 +10,9 @@
 
         <div class="about--image">
             <VImg 
-            class="profile-photo"
-            :src="ProfilePhotoSrc" 
-            alt="Austin Thomas" 
+                class="profile-photo"
+                :src="ProfilePhotoSrc" 
+                alt="Austin Thomas" 
             />
         </div>
 
@@ -22,8 +22,23 @@
 </template>
 
 <script setup>
+import { computed } from 'vue'; 
+import { useLayout } from '@/composables/layout.js';
 import GridContainer from '@/components/layout/Container/GridContainer.vue';
 import ProfilePhotoSrc from "@/assets/images/ProfilePhoto.png";
+
+const { isMobile, isTablet } = useLayout();
+
+const containerGap = computed(() => {
+    if (isMobile.value) {
+        return '2rem';
+    } else if (isTablet.value) {
+        return '4rem';
+    }
+
+    return '8rem';
+
+});
 </script>
 
 <style scoped>
@@ -37,6 +52,37 @@ import ProfilePhotoSrc from "@/assets/images/ProfilePhoto.png";
 
 .profile-photo,
 .profile-photo img {
-    max-width: 480px;
+    max-width: 300px;
+    width: auto;
+}
+
+.profile-photo,
+.profile-photo::after {
+    border-radius: 10px;
+}
+
+.profile-photo {
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-photo::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--accent-primary);
+    mix-blend-mode: color;
+    transition: opacity 0.3s ease;
+}
+
+.profile-photo::after {
+    opacity: 1;
+}
+
+.profile-photo:hover::after {
+    opacity: 0;
 }
 </style>

@@ -4,7 +4,7 @@
         <VApp>
             <SiteHeader></SiteHeader>
             <VMain>
-                <FlexContainer class="app-content" direction="column" horizontal-align="center" padding="var(--content-padding)">
+                <FlexContainer class="app-content" direction="column" horizontal-align="center">
                 
                 <SectionWrapper id="welcome">
                     <WelcomeView></WelcomeView>
@@ -58,5 +58,9 @@ onMounted(async () => {
 .fade-enter-from,
 .fade-leave-to {
     opacity: 0;
+}
+
+#welcome {
+    min-height: 100vh;
 }
 </style>

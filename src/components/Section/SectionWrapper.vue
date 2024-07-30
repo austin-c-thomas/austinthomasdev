@@ -13,9 +13,11 @@ const { headerHeight } = useLayout();
 const wrapperStyle = computed(() => {
     return {
         paddingTop: `${headerHeight.value}px`,
-        minHeight: '100vh',
+        paddingBottom: `var(--content-padding-top-bottom)`,
+        paddingRight: 'var(--content-padding-left-right)',
+        paddingLeft: 'var(--content-padding-left-right)',
         width: '100%',
-        maxWidth: 'var(--max-content-width)'
+        maxWidth: 'var(--max-content-width)',
     };
 });
 </script>

@@ -1,23 +1,37 @@
 :root {
-    --max-content-width: 100%;
+    --max-content-width: 1400px;
     --content-padding: 0 3rem;
+    --header-padding-left-right: 3rem;
+    --header-padding-top-bottom: 0;
+    --content-padding-left-right: 3rem;
+    --content-padding-top-bottom: 0;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1400px) {
     :root {
-        --content-padding: 0 5%;
+        --header-padding-left-right: 10%;
+        --content-padding-left-right: 10%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    :root {
+        --header-padding-left-right: 5%;
+        --content-padding-left-right: 5%;
     }
 }
 
 @media screen and (max-width: 767px) {
     :root {
-        --content-padding: 0 2rem;
+        --header-padding-left-right: 2rem;
+        --content-padding-left-right: 2rem;
     }
 }
 
 @media screen and (max-width: 449px) {
     :root {
-        --content-padding: 0 1rem;
+        --header-padding-left-right: 2rem;
+        --content-padding-left-right: 1rem;
     }
 }
 
