@@ -31,10 +31,7 @@
             
 </template>
 
-<script setup>
-import FlexContainer from '@/components/layout/Container/FlexContainer.vue';
-import AccentText from '@/components/layout/Text/AccentText.vue';
-</script>
+<script setup></script>
 
 <style scoped>
 .accent-text {

@@ -25,7 +25,6 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue';
 import { useStore } from 'vuex';
-import FlexContainer from '@/components/layout/Container/FlexContainer.vue';
 import WelcomeScreen from '@/components/WelcomeScreen/WelcomeScreen.vue';
 import SiteHeader from '@/components/SiteHeader/SiteHeader.vue';
 import WelcomeView from '@/views/WelcomeView.vue';

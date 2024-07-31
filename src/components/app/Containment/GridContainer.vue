@@ -50,9 +50,9 @@ const { rows, rowSizes, columns, columnSizes, gap, padding, margin, fitContent }
 
 const gridStyle = computed(() => {
     let display = 'grid';
-    if (isMobile.value) {
-        display = 'flex';
-    }
+    // if (isMobile.value) {
+    //     display = 'flex';
+    // }
 
     let gridTemplateRows = rows.value ? `repeat(${rows.value}, 1fr)` : 'none';
     if (rowSizes.value.length) {

@@ -1,17 +1,9 @@
 <template>
-    <ViewWrapper id="work-history">
-
-        <FlexContainer direction="column" gap="1rem">
-            <h2><AccentText>02.</AccentText>Work History</h2>
-        </FlexContainer>
-
-    </ViewWrapper>
+    <FlexContainer direction="column" gap="1rem">
+        <h2><AccentText>02.</AccentText>Work History</h2>
+    </FlexContainer>
 </template>
 
-<script setup>
-import ViewWrapper from '@/components/layout/Container/ViewWrapper.vue';
-import FlexContainer from '@/components/layout/Container/FlexContainer.vue';
-import AccentText from '@/components/layout/Text/AccentText.vue';
-</script>
+<script setup></script>
 
 <style scoped></style>

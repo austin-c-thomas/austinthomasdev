@@ -44,7 +44,6 @@
 <script setup>
 import { ref } from "vue"; 
 import { useLayout } from "@/composables/layout.js";
-import FlexContainer from "@/components/layout/Container/FlexContainer.vue";
 import LogoButton from "@/components/SiteHeader/LogoButton.vue";
 import SiteNavigation from "@/components/SiteHeader/SiteNavigation.vue";
 

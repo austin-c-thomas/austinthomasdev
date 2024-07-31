@@ -22,8 +22,6 @@
 import { computed } from 'vue';
 import { useStore } from 'vuex';
 import { useLayout } from '@/composables/layout.js';
-import FlexContainer from '@/components/layout/Container/FlexContainer.vue';
-import AccentText from '@/components/layout/Text/AccentText.vue';
 
 const { isMobile } = useLayout();
 

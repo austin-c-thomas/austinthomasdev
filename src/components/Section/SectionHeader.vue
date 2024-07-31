@@ -14,9 +14,7 @@
     </div>
 </template>
 
-<script setup>
-import AccentText from '@/components/layout/Text/AccentText.vue';
-</script>
+<script setup></script>
 
 <style scoped>
 .section-header {

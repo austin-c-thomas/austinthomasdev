@@ -20,8 +20,6 @@
   
 <script setup>
 import { ref, onMounted } from 'vue';
-import FlexContainer from '@/components/layout/Container/FlexContainer.vue';
-import AccentText from '../layout/Text/AccentText.vue';
 import PersonalLogoSrc from "@/assets/images/PersonalLogo.svg";
 
 const logoWidth = ref(100);

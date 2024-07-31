@@ -3,7 +3,7 @@ import { createStore } from "vuex";
 
 const sectionComponents = {
     'welcome': defineAsyncComponent(() => import('@/views/WelcomeView.vue')),
-    'about': defineAsyncComponent(() => import('@/views/AboutView.vue')),
+    'about': defineAsyncComponent(() => import('@/views/About/AboutView.vue')),
     'work-history': defineAsyncComponent(() => import('@/views/WorkHistoryView.vue')),
     'projects': defineAsyncComponent(() => import('@/views/ProjectsView.vue')),
     'contact': defineAsyncComponent(() => import('@/views/ContactView.vue')),

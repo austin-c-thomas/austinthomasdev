@@ -1,5 +1,6 @@
 @import './base.css';
 @import './animate.css';
+@import './link.css';
 
 * {
     box-sizing: border-box;
