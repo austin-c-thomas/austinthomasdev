@@ -18,6 +18,7 @@ const wrapperStyle = computed(() => {
         paddingLeft: 'var(--content-padding-left-right)',
         width: '100%',
         maxWidth: 'var(--max-content-width)',
+        minHeight: '100vh', // Temp
     };
 });
 </script>

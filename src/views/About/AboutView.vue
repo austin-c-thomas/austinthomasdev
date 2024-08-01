@@ -1,6 +1,5 @@
 <template>
-    <div class="about">
-        
+    <div class="section">
         <div class="about--main">
             <div class="about--content">
                 <p>What do you get when you take a service industry hustler/entrepreneurship major and teach them to write code? Someone who gets sh*t done.</p>
@@ -21,21 +20,16 @@
         </div>
 
         <TechStack></TechStack>
-        
-
     </div>
-
 </template>
 
 <script setup>
-import { useNavigation } from '@/composables/navigation.js';
 import ProfileImage from './partials/ProfileImage.vue';
 import TechStack from './partials/TechStack.vue';
-const { navigateToSection } = useNavigation();
 </script>
 
 <style scoped>
-.about {
+.section {
     padding: 2rem 0;
 }
 

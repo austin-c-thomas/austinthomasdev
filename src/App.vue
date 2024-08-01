@@ -37,10 +37,10 @@ const sections = computed(() => store.getters.sections);
 const showWelcomeScreen = ref(true);
 
 onMounted(async () => {
-    // showWelcomeScreen.value = false;
-    setTimeout(() => {
     showWelcomeScreen.value = false;
-    }, 5000);
+    // setTimeout(() => {
+    //     showWelcomeScreen.value = false;
+    // }, 5000);
 })
 </script>
   
