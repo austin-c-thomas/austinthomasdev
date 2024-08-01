@@ -16,6 +16,10 @@ const props = defineProps({
     section: {
         type: String,
         required: true
+    },
+    project: {
+        type: String,
+        default: () => ""
     }
 })
 

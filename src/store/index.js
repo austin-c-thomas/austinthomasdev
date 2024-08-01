@@ -37,7 +37,8 @@ const store = createStore({
                 title: "Contact", 
                 titlePrepend: "", 
             },        
-        ]
+        ],
+        currentProject: "",
     },
     actions: {},
     mutations: {},
@@ -47,6 +48,7 @@ const store = createStore({
             titlePrepend: `0${index + 1}. `,
             component: sectionComponents[section.id]
         })),
+        currentProject: (state) => state.currentProject,
     },
 });
 

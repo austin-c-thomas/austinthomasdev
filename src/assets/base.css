@@ -98,8 +98,8 @@
     --line-height-h5: 1.5rem;
     --letter-spacing-h5: -0.01em;
 
-    --font-size-h6: 24px;
-    --font-weight-h6: 500;
+    --font-size-h6: 20px;
+    --font-weight-h6: 600;
     --line-height-h6: 1.5rem;
     --letter-spacing-h6: -0.01em;
 
@@ -168,7 +168,7 @@ h5 {
 h6 {
     font-size: var(--font-size-h6);
     line-height: var(--line-height-h6);
-    font-weight: var(--font-weight-meh6);
+    font-weight: var(--font-weight-h6);
     letter-spacing: var(--letter-spacing-h6);
 }
 

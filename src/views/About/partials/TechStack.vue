@@ -1,6 +1,6 @@
 <template>
     <FlexContainer direction="column">
-        <h3>I'm currently working with:</h3>
+        <h6>I'm currently working with:</h6>
 
         <div class="technologies">
 
@@ -11,7 +11,7 @@
                 vertical-align="center"
                 gap="1rem"
             >
-                <div class="technology--icon">
+                <div class="technology--icon transition">
                     <VIcon :icon="technology.icon"></VIcon>
                 </div>
                 <span class="technology--name">{{ technology.name }}</span>
@@ -61,6 +61,10 @@ const technologies = ref([
     height: 40px;
     width: 40px;
     border-radius: 100%;
+}
+
+.technology:hover .technology--icon {
+    background-color: var(--accent-primary);
 }
 
 @media screen and (max-width: 768px) {
