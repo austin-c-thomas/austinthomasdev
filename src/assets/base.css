@@ -38,14 +38,14 @@
 /* Typography */
 @font-face {
     font-family: 'Inter';
-    src: url('@/assets/font/Inter.ttf') format('truetype');
+    src: url('@/assets/fonts/Inter.ttf') format('truetype');
     font-weight: 100 200 300 400 500 600 700 800 900;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Smooch Sans';
-    src: url('@/assets/font/SmoochSans.ttf') format('truetype');
+    src: url('@/assets/fonts/SmoochSans.ttf') format('truetype');
     font-weight: 100 200 300 400 500 600 700 800 900;
     font-style: normal;
 }
@@ -53,7 +53,7 @@
 
 @font-face {
     font-family: 'Fira Code';
-    src: url('@/assets/font/FiraCode.ttf') format('truetype');
+    src: url('@/assets/fonts/FiraCode.ttf') format('truetype');
     font-weight: 300 400 500 600 700;
     font-style: normal;
 }
