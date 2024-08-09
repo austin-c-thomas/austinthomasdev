@@ -13,11 +13,11 @@
             </div>
 
             <div class="statement">
-                <p>I'm a fullstack software engineer located near San Diego, California. I like long walks on the beach, service repository patterns, and that feeling you get after deleting a bunch of unused code.</p><p>Let's work together.</p>
+                <p>I'm a fullstack software engineer located near San Diego, California. I like long walks on the beach, service-repository patterns, and that feeling you get after deleting a bunch of unused code.</p>
             </div>
         </FlexContainer>
         
-        <FlexContainer fit-content>
+        <!-- <FlexContainer fit-content>
             <div class="cta">
                 <VBtn
                     variant="outlined"
@@ -25,7 +25,7 @@
                     size="large"
                 >Resume</VBtn>
             </div>
-        </FlexContainer>
+        </FlexContainer> -->
 
     </FlexContainer>
             
