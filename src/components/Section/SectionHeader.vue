@@ -10,6 +10,10 @@
             <slot name="title">
                 <slot></slot>
             </slot>
+
+            <AccentText v-if="$slots.titleAppend" class="section-header--title-append">
+                <slot name="titleAppend"></slot>
+            </AccentText>
         </h2>
     </div>
 </template>
@@ -21,7 +25,8 @@
     margin-bottom: 1rem;
 }
 
-.section-header--title-prepend {
+.section-header--title-prepend,
+.section-header--title-append {
     font-size: var(--font-size-h4);
 }
 </style>

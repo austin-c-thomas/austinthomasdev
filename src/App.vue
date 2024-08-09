@@ -18,6 +18,7 @@
 
                 </FlexContainer>
             </VMain>
+            <SiteFooter></SiteFooter>
         </VApp>
     </Transition>
 </template>
@@ -30,6 +31,7 @@ import SiteHeader from '@/components/SiteHeader/SiteHeader.vue';
 import WelcomeView from '@/views/WelcomeView.vue';
 import SectionWrapper from '@/components/Section/SectionWrapper.vue';
 import SectionView from '@/components/Section/SectionView.vue';
+import SiteFooter from '@/components/SiteFooter/SiteFooter.vue';
 
 const store = useStore();
 const sections = computed(() => store.getters.sections);
@@ -37,10 +39,10 @@ const sections = computed(() => store.getters.sections);
 const showWelcomeScreen = ref(true);
 
 onMounted(async () => {
-    showWelcomeScreen.value = false;
-    // setTimeout(() => {
-    //     showWelcomeScreen.value = false;
-    // }, 5000);
+    // showWelcomeScreen.value = false;
+    setTimeout(() => {
+        showWelcomeScreen.value = false;
+    }, 2000);
 })
 </script>
   

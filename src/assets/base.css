@@ -93,13 +93,13 @@
     --line-height-h4: 1.5rem;
     --letter-spacing-h4: -0.01em;
 
-    --font-size-h5: 24px;
-    --font-weight-h5: 600;
+    --font-size-h5: 20px;
+    --font-weight-h5: 700;
     --line-height-h5: 1.5rem;
     --letter-spacing-h5: -0.01em;
 
-    --font-size-h6: 20px;
-    --font-weight-h6: 600;
+    --font-size-h6: 16px;
+    --font-weight-h6: 700;
     --line-height-h6: 1.5rem;
     --letter-spacing-h6: -0.01em;
 
@@ -172,11 +172,35 @@ h6 {
     letter-spacing: var(--letter-spacing-h6);
 }
 
-p {
+p, li {
     font-size: var(--font-size-body-default);
     line-height: var(--line-height-body-default);
     font-weight: var(--font-weight-body-default);
     letter-spacing: var(--letter-spacing-body-default);
+}
+
+p, ul {
+    margin-bottom: 1.5rem;
+}
+
+ul {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+ul li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+ul li::before {
+    content: "▹";
+    /* content: "➤"; */
+    position: absolute;
+    left: 0px;
+    color: var(--accent-primary)
 }
 
 p.large {
@@ -250,7 +274,7 @@ p.small {
     --accent-tertiary: #64FFDA;
 }
 
-p {
+p, li {
     color: var(--text-secondary);
 }
 

@@ -9,11 +9,11 @@
 
             <div class="hook">
                 <h1 class="welcome--title">Hi, I'm Austin.</h1>
-                <span class="welcome--subtitle color-text-secondary">Tagline goes here.</span>
+                <span class="welcome--subtitle color-text-secondary">I make things happen with code.</span>
             </div>
 
             <div class="statement">
-                <p>I'm a versatile developer specializing in building cutting-edge products from the ground up. With expertise in Golang, PHP, MySQL, and Vue, I excel at creating robust APIs, implementing third-party integrations, and developing generative AI features. Currently at Ezoic, I'm passionate about turning complex challenges into elegant, user-friendly solutions.</p>
+                <p>I'm a fullstack software engineer located near San Diego, California. I like long walks on the beach, service repository patterns, and that feeling you get after deleting a bunch of unused code.</p><p>Let's work together.</p>
             </div>
         </FlexContainer>
         

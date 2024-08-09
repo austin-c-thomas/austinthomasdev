@@ -23,9 +23,13 @@ const props = defineProps({
     }
 })
 
-const { navigateToSection } = useNavigation();
+const { navigateToSection, selectProject } = useNavigation();
 
 const handleFollowLink = () => {
-    navigateToSection(props.section)
+    navigateToSection(props.section);
+    
+    if (props.project) {
+        selectProject(props.project);
+    }
 }
 </script>

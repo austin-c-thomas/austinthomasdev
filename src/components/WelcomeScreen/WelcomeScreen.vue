@@ -13,8 +13,8 @@
         :height="logoHeight"
         :width="logoWidth"
         />
-        <h2 class="welcome-title large animated animate--typing">Austin Thomas</h2>
-        <AccentText class="welcome-subtitle animated animate--typing">Fullstack Software Engineer</AccentText>
+        <!-- <h2 class="welcome-title large animated animate--typing">Austin Thomas</h2>
+        <AccentText class="welcome-subtitle animated animate--typing">Fullstack Software Engineer</AccentText> -->
     </FlexContainer>
 </template>
   

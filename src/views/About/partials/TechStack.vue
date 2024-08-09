@@ -1,7 +1,6 @@
 <template>
-    <FlexContainer direction="column">
-        <h6>I'm currently working with:</h6>
-
+    <FlexContainer direction="column" margin="1.5rem 0">
+        <h6>Lately I've been using:</h6>
         <div class="technologies">
 
             <div 

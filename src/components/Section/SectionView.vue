@@ -4,8 +4,9 @@
         <div class="section">
 
             <SectionHeader>
-                <template v-slot:titlePrepend>{{ section.titlePrepend }}</template>
+                <template v-if="section.titlePrepend" v-slot:titlePrepend>{{ section.titlePrepend }}</template>
                 <template v-slot:title>{{section.title}}</template>
+                <template v-if="section.titleAppend" v-slot:titleAppend>{{ section.titleAppend }}</template>
             </SectionHeader>
 
             <component :is="section.component"></component>

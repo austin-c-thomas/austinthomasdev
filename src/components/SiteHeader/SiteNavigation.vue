@@ -12,7 +12,7 @@
                 link
             >
                 <AccentText>{{ item.titlePrepend }}</AccentText>
-                {{ item.title }}
+                {{ item.navText }}
             </VListItem>
         </FlexContainer>
     </VList>

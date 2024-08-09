@@ -11,3 +11,22 @@
 .v-btn {
     text-transform: none;
 }
+
+.project-list-item {
+    padding: 0 !important;
+    padding-inline: 0 !important;
+}
+
+.project-list-item .v-list-item__prepend {
+    height: 100%;
+}
+
+@media screen and (max-width: 450px) {
+    .v-timeline-divider {
+        display: none;
+    }
+
+    .v-timeline-item__body {
+        padding: 0 !important;
+    }
+}
