@@ -38,30 +38,11 @@
 <script setup>
 import { computed } from 'vue';
 import { useStore } from 'vuex';
-import { useLayout } from '@/composables/layout.js';
 import DynamicBullet from '@/components/DynamicBullet/DynamicBullet.vue';
 
 const store = useStore();
 
 const workHistory = computed(() => store.getters.workHistory || []);
-
-const { isMobile } = useLayout();
-
-const wrapperComponent = computed(() => {
-    if (isMobile.value) {
-        return "FlexContainer";
-    }
-
-    return "VTimeline";
-});
-
-const itemComponent = computed(() => {
-    if (isMobile.value) {
-        return "div";
-    }
-
-    return "VTimelineItem";
-})
 
 </script>
 
