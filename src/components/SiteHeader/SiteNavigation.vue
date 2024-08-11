@@ -1,18 +1,35 @@
 <template>
     <VList class="nav-list" :style="listStyle">
         <FlexContainer :direction="isMobile ? 'column' : 'row'">
-            <VListItem 
-                v-for="(item, index) in menuItems"
-                :key="index"
-                :style="itemStyle"
-                class="nav-item"
-                variant="plain"
-                @click="handleItemClick(item.id)"
-                rounded
-                link
-            >
-                <AccentText>{{ item.titlePrepend }}</AccentText>
-                {{ item.navText }}
+
+            <template v-for="(item, index) in menuItems" :key="index">
+
+                <VDivider v-if="isMobile" class="divider"></VDivider>
+
+                <VListItem 
+                    :style="itemStyle"
+                    class="nav-item"
+                    variant="plain"
+                    @click="handleItemClick(item.id)"
+                    rounded
+                    link
+                >
+                    <AccentText>{{ item.titlePrepend }}</AccentText>
+                    {{ item.navText }}
+                </VListItem>
+
+            </template>
+
+            <VDivider v-if="isMobile" class="divider"></VDivider>
+
+            <VListItem class="cta-button">
+                <VBtn
+                    :variant="isMobile ? 'outlined' : 'tonal'"
+                    :size="isMobile ? 'large' : 'default'"
+                    color="primary"
+                    href="/resume.pdf"
+                    target="_blank"
+                >Resume</VBtn>
             </VListItem>
         </FlexContainer>
     </VList>
@@ -52,7 +69,19 @@ const listStyle = computed(() => {
 const itemStyle = computed(() => {
     return {
         width: isMobile.value ? '100%' : 'fit-content',
-        fontSize: isMobile.value ? '1.25rem' : '1rem',
+        fontSize: isMobile.value ? '1.5rem' : '1rem',
     }
 });
 </script>
+
+<style scoped>
+.divider {
+    width: 100%;
+    margin: 0.5rem 0;
+    color: var(--text-secondary);
+}
+
+.cta-button {
+    margin: 2rem 0;
+}
+</style>

@@ -48,15 +48,15 @@ const store = createStore({
                 to: "Present",
                 bullets: [
                     {
-                        content: "Lead end-to-end feature development for Support Engineering, {{0}}, {{1}}, {{2}}, and more",
+                        content: "Led end-to-end feature development for Support Engineering projects including a {{0}}, {{1}}, {{2}}, and more",
                         links: [
                             { type: "InternalLink", props: { section: "projects", project: "ai-support-chat"}, text: "generative AI chatbot"},
-                            { type: "InternalLink", props: { section: "projects", project: "knowledgebase"}, text: "AI-powered Ezoic Knowledgebase revamp"},
+                            { type: "InternalLink", props: { section: "projects", project: "knowledgebase"}, text: "AI-powered Knowledgebase"},
                             { type: "InternalLink", props: { section: "projects", project: "email-ticket-processor"}, text: "email ticket processing"},
                         ]
                     },
                     {
-                        content: "Architected Golang APIs, microservices and cron jobs to drive key business initiatives",
+                        content: "Architected backend systems with various interacting microservices and cron jobs to drive key business initiatives",
                         links: [],
                     },
                     {

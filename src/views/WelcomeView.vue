@@ -17,15 +17,17 @@
             </div>
         </FlexContainer>
         
-        <!-- <FlexContainer fit-content>
+        <FlexContainer fit-content>
             <div class="cta">
                 <VBtn
                     variant="outlined"
                     color="primary"
                     size="large"
+                    href="/resume.pdf"
+                    target="_blank"
                 >Resume</VBtn>
             </div>
-        </FlexContainer> -->
+        </FlexContainer>
 
     </FlexContainer>
             

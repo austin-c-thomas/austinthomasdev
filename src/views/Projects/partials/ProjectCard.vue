@@ -1,6 +1,6 @@
 <template>
 
-    <div class="project-card">
+    <div class="project-card" :id="projectData.id">
 
         <AccentText class="project--organization">{{ projectData.organization }}</AccentText>
 

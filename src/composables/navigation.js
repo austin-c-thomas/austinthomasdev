@@ -1,9 +1,12 @@
 import { computed } from 'vue';
 import { useStore } from 'vuex';
+import { useLayout } from '@/composables/layout.js';
 
 export function useNavigation() {
 
     // Setup
+    const { isMobile } = useLayout();
+
     const store = useStore();
 
     const currentProject = computed(() => store.getters.currentProject);
@@ -22,6 +25,10 @@ export function useNavigation() {
 
     const selectProject = async (projectId) => {
         await setCurrentProject(projectId);
+
+        if (isMobile.value) {
+            navigateToSection(projectId);
+        }
     }
 
     const clearProjectSelection = async () => {
