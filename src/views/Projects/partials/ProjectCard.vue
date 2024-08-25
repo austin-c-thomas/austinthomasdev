@@ -16,7 +16,7 @@
         <div class="project--specs">
 
             <div v-if="projectData.technologies" class="project--technologies">
-                <AccentText size="small">Technologies</AccentText>
+                <AccentText size="small" color="text-secondary">Technologies</AccentText>
                 <div class="project--specs--items">
                     <div class="project--specs--item" v-for="(technology, index) in projectData.technologies" :key="index">
                         {{ technology }}
@@ -25,7 +25,7 @@
             </div>
 
             <div v-if="projectData.apis" class="project--apis">
-                <AccentText size="small">APIs / Integrations</AccentText>
+                <AccentText size="small" color="text-secondary">APIs / Integrations</AccentText>
                 <div class="project--specs--items">
                     <div class="project--specs--item" v-for="(api, index) in projectData.apis" :key="index">
                         {{ api }}

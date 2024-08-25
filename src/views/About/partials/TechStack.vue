@@ -62,10 +62,6 @@ const technologies = ref([
     border-radius: 100%;
 }
 
-.technology:hover .technology--icon {
-    background-color: var(--accent-primary);
-}
-
 @media screen and (max-width: 768px) {
     .technologies {
         grid-template-columns: repeat(2, 1fr);
